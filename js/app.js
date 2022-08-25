@@ -27,7 +27,10 @@ const app = new Vue ({
         toDoList : toDoList,
     },
     methods: {
-        
+        toggleDone (todo) {
+            console.log('Done')
+            todo.done = !todo.done 
+        }
     },
 })
 
