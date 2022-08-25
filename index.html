@@ -17,13 +17,14 @@
         </header>
         <main>
             <div class="container">
-                <input type="text" placeholder="Cose da fare..." v-model="newToDo">
-                <input type="button" value="Aggiungi" @click="toDoAdd" >
+                <input type="text" placeholder="Cose da fare..." v-model="newToDo" @keyup.enter="toDoAdd">
+                <input type="button" value="Aggiungi" @click="toDoAdd"  >
             </div>
             <div class="container">
                 <ul>
                     <li v-for="toDo in toDoList" 
                         :class="toDo.done ? 'done' : ''"
+                        @click="toggleDone(toDo)"
                         class="todo"> 
                         {{toDo.text}} 
                         <i @click="toggleDone(toDo)" class="fa-solid fa-xmark"></i>

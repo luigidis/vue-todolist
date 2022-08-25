@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: beige;
+}
+
 ul, ol, menu {
     list-style: none;
 }
@@ -20,9 +24,16 @@ h1 {
 
 .todo {
     font-weight: bold;
-    font-size: 1.5rem;
-
+    font-size: 1rem;
 }
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 
 .done {
     text-decoration: line-through;
